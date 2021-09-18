@@ -1,6 +1,6 @@
-# [Otevřená skripta](https://www.o2rw.eu)
+# [Otevřená skripta](www.o2rw.eu)
 
-[Otevřená skripta](https://www.o2rw.eu) je sbírka systematicky tříděných poznámek s návazností na předměty přednášené na FS ČVUT. Do sbírky je možné libovolně přispívat a libovolně editovat stávající záznamy. Všechny texty pracují s formátem `.tex`.
+[Otevřená skripta](www.o2rw.eu) je sbírka systematicky tříděných poznámek s návazností na předměty přednášené na FS ČVUT. Do sbírky je možné libovolně přispívat a libovolně editovat stávající záznamy. Všechny texty pracují s formátem `.tex`.
 
 ### Jak to funguje?
 
