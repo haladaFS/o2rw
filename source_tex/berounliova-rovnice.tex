@@ -1,0 +1,92 @@
+%[HLAVICKA SOUBORU]
+%Název článku = "Bernouliova rovnice"
+%Zařazení = "Matematika"
+%Předměty = "MKO", "MT"
+%Zařazení = "zk", "zk"
+%Autor = "Tomáš Druhý"
+
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{siunitx}
+\usepackage[czech]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[left=2cm, right=2cm, top=1.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage{mathtools} % dalsi matematicke znaky, vyrazy
+\usepackage{amsthm} % psani matematickych definic, vet a dukazu
+
+\usepackage{xcolor}
+
+
+%% citace:
+\usepackage[backend=biber, style=numeric, sorting=nty, hyperref]{biblatex}
+%\usepackage[backend=biber,style=numeric,sortcites,sorting=nty,backref,natbib,hyperref]{biblatex}
+\addbibresource{unilbm.bib}
+\usepackage{filecontents}
+
+\usepackage{mathptmx}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+
+
+
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\textheight=240mm
+
+\begin{document}
+\thispagestyle{empty}
+
+\noindent
+\subsection*{Bernoulliho rovnice}
+
+\subsubsection*{Testovací příspěvek}
+
+\noindent
+Rovnice, rovnice, rovnice.
+
+\begin{equation}
+	\frac{u_1^2 }{2} + \frac{p_1 }{\rho} + gh_1 = \text{konst.}
+\end{equation}
+
+\noindent
+Testovací	rovnice, testovací text
+
+\begin{equation}
+\frac{\partial \vect{u}}{\partial t} + \nabla \cdot\vect{F}(\vect{u}) = 0
+\end{equation}
+\begin{equation}
+	\frac{\vect{u}_i^{n+1}-\vect{u}_i^{n}}{\Delta t} = -\frac{\vect{F}_{i+\frac{1 }{2}}^{*}-\vect{F}_{i-\frac{1 }{2}}^{*}}{\Delta x} \quad ; \quad \vect{F}* = \frac{1}{2}\big[ \vect{F}(\vect{u}_L) + \vect{F}(\vect{u}_R) - \frac{\varepsilon }{f}(\vect{u}_R - \vect{u}_L)\big]
+\end{equation}
+%SPH:
+%\begin{equation}
+%	\frac{\text{d}\vect{u}}{\text{d} t} = \frac{\nabla\cdot\vect{F}(\vect{u})}{\rho}
+%\end{equation}
+%\begin{equation}
+%	\frac{\text{d}\vect{u}_a}{\text{d} t} = - \sum_b m_b \bigg[\frac{\vect{F}_a }{\Omega_a \rho_a^2}\cdot \nabla_a W_{ab}(h_a) + \frac{\vect{F}_b }{\Omega_a \rho_a^2}\cdot \nabla_a W_{ab}(h_b) \bigg] - \sum_b \frac{m_b }{\bar{\rho}_{ab}}\bar{\varepsilon}(\vect{u}_a - \vect{u}_b)\frac{\vect{r}_{ab}}{\abs{\vect{r}_{ab}}}\cdot \bar{\nabla_a W_{ab}}
+%\end{equation}
+
+\subsubsection*{Smoothed particle hydrodynamics}
+
+
+\noindent
+Wendland kernel - funkce čtvrtého řádu:
+$$
+	W(r,h) = \alpha_d \bigg( 1 - \frac{q}{2} \bigg)^4 (2q +1); \quad 0 \leq q \leq 2
+$$
+kde $ \alpha_d $ je normovací konstanta s hodnotou $ 7/(4\pi h^2) $. \textcolor{blue}{Je možné použít celou řadu funkcí, které ve smyslu slabé limity konvergují k Dirackově delta distribuci.} Pořadujeme tedy
+
+\begin{itemize}
+	\item jednotkový integrál, konstanta $ \alpha_D $ tedy zajišťuje normování
+	\item kompaktní nosič s tzv. \textit{cut-off} vzdálenosti $ \kappa h $
+\end{itemize}
+
+\end{document}
